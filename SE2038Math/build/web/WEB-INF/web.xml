@@ -4,8 +4,16 @@
         <servlet-name>MathServlet</servlet-name>
         <servlet-class>controllers.MathServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>GCDServlet</servlet-name>
+        <servlet-class>controllers.GCDServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>MathServlet</servlet-name>
         <url-pattern>/mymath</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GCDServlet</servlet-name>
+        <url-pattern>/commondiv</url-pattern>
     </servlet-mapping>
 </web-app>
