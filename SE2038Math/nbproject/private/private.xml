@@ -2,6 +2,14 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/E:/Temp/2026/SU26/SU26%20PRJ301%20SE2038/SE2038Math/web/WEB-INF/web.xml</file>
+            <file>file:/E:/Temp/2026/SU26/SU26%20PRJ301%20SE2038/SE2038Math/src/java/controllers/TienDienServlet.java</file>
+            <file>file:/E:/Temp/2026/SU26/SU26%20PRJ301%20SE2038/SE2038Math/web/tiendien.html</file>
+            <file>file:/E:/Temp/2026/SU26/SU26%20PRJ301%20SE2038/SE2038Math/src/java/controllers/TinhTongServlet.java</file>
+            <file>file:/E:/Temp/2026/SU26/SU26%20PRJ301%20SE2038/SE2038Math/src/java/controllers/MoneyExchangeServlet.java</file>
+            <file>file:/E:/Temp/2026/SU26/SU26%20PRJ301%20SE2038/SE2038Math/web/moneyexchange.html</file>
+            <file>file:/E:/Temp/2026/SU26/SU26%20PRJ301%20SE2038/SE2038Math/web/tinhtong.html</file>
+        </group>
     </open-files>
 </project-private>
