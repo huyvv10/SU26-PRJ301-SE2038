@@ -8,6 +8,18 @@
         <servlet-name>GCDServlet</servlet-name>
         <servlet-class>controllers.GCDServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>TinhTongServlet</servlet-name>
+        <servlet-class>controllers.TinhTongServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>TienDienServlet</servlet-name>
+        <servlet-class>controllers.TienDienServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>MoneyExchangeServlet</servlet-name>
+        <servlet-class>controllers.MoneyExchangeServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>MathServlet</servlet-name>
         <url-pattern>/mymath</url-pattern>
@@ -15,5 +27,17 @@
     <servlet-mapping>
         <servlet-name>GCDServlet</servlet-name>
         <url-pattern>/commondiv</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>TinhTongServlet</servlet-name>
+        <url-pattern>/tinhtong</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>TienDienServlet</servlet-name>
+        <url-pattern>/tiendien</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MoneyExchangeServlet</servlet-name>
+        <url-pattern>/moneyexchange</url-pattern>
     </servlet-mapping>
 </web-app>

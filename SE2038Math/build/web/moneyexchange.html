@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Money Exchange</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <center><div><h2>MONEY EXCHANGE</h2></div></center>
+        <form action="moneyexchange" method="post">
+            <table>
+                <tr>
+                    <td>Amount</td>
+                    <td><input type="text" name="amount"></td>
+                    <td>
+                        <select name="method">
+                            <option value="buy">Buy</option>
+                            <option value="sell" selected>Sell</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="radio" name="moneytype" value="usd" checked>USD<br>
+                        <input type="radio" name="moneytype" value="eur">EUR<br>
+                        <input type="radio" name="moneytype" value="gbp">GBP<br>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Exchange">
+                        <input type="reset" value="Clear">
+                    </td>
+                    <td></td>
+                </tr>
+            </table>
+            
+        </form>
+    </body>
+</html>
