@@ -61,7 +61,8 @@ public class TmpServlet extends HttpServlet {
         int n=0;
         if (!num.isEmpty()){
             try {
-                
+                n=Integer.parseInt(num);
+                double d = Double.parseDouble("dai");
             } catch (NumberFormatException e) {
                 
             }
