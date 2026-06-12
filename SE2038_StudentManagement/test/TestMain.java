@@ -27,6 +27,14 @@ public class TestMain {
             System.out.println(s.toString());
         }
         
+        System.out.println("");
+        Student x = dao.getStudentById("He200002");
+        System.out.println(x.toString());
         
+        dao.updateStudent("He200003", "Lã Bất Vi", "1800-01-01", "Nam");
+
+        System.out.println("");
+        x = dao.getStudentById("He200003");
+        System.out.println(x.toString());        
     }
 }

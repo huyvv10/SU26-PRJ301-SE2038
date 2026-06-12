@@ -12,6 +12,10 @@
         <servlet-name>AddStudentServlet</servlet-name>
         <servlet-class>controllers.AddStudentServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>UpdateStudentServlet</servlet-name>
+        <servlet-class>controllers.UpdateStudentServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>DisplayStudentServlet</servlet-name>
         <url-pattern>/displaystudents</url-pattern>
@@ -23,5 +27,9 @@
     <servlet-mapping>
         <servlet-name>AddStudentServlet</servlet-name>
         <url-pattern>/addstudent</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateStudentServlet</servlet-name>
+        <url-pattern>/update</url-pattern>
     </servlet-mapping>
 </web-app>

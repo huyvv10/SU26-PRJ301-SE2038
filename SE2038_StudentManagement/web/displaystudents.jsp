@@ -35,7 +35,7 @@
                 <td>${i.dob}</td>
                 <td>${i.gender}</td>
                 <td>
-                    <a href="#">Update</a> | <a href="delete?sid=${i.id}"> Delete</a>    
+                    <a href="update?sid=${i.id}">Update</a> | <a href="delete?sid=${i.id}"> Delete</a>    
                 </td>
             </tr>
             </c:forEach>

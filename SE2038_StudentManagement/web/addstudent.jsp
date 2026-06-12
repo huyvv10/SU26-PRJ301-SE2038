@@ -30,7 +30,7 @@
             <tr>
                 <td>Student Gender</td>
                 <td>
-                    <input type="radio" name="rbGender" id="rbNam" value="M">Nam
+                    <input type="radio" name="rbGender" id="rbNam" value="M" checked>Nam
                     <input type="radio" name="rbGender" id="rbNu" value="F">Nữ
                 </td>
             </tr>
