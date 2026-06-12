@@ -54,4 +54,20 @@ public class StudentDAO {
         }
     }
     
+    public void addStudent(String id, String name, String dob, String gender){
+        try {
+            String sql = "INSERT INTO tbStudent\n" +
+                         "VALUES (?, ?, ?, ?)";
+            DBContext db = new DBContext();
+            conn = db.getConnection();
+            ps = conn.prepareStatement(sql);
+            ps.setString(1, id);
+            ps.setString(2, name);
+            ps.setString(3, dob);
+            ps.setString(4, gender);
+            ps.executeUpdate();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
 }

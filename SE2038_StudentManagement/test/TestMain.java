@@ -18,12 +18,15 @@ public class TestMain {
         StudentDAO dao = new StudentDAO();
         List<Student> myStd = new ArrayList<>();
         //Delete student by ID
-        dao.deleteStudent("He200014");
-        
+//        dao.deleteStudent("He200014");
+        dao.addStudent("He200003", "Gì cũng được", "2000-12-31", "Nữ");
+
         myStd = dao.getAllStudent();
         
         for (Student s : myStd) {
             System.out.println(s.toString());
         }
+        
+        
     }
 }
