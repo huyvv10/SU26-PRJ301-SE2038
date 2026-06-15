@@ -11,6 +11,15 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Student list</title>
+        <script>
+            function doDelete(id){
+                var conf='Do you really want to delete student with id = '+id+'?';
+                if (confirm(conf)){
+                    window.location.href='delete?sid='+id;
+                }
+            }
+        </script>
+        
     </head>
     <body>
     <center><h1>Display all students!</h1></center>
@@ -35,7 +44,8 @@
                 <td>${i.dob}</td>
                 <td>${i.gender}</td>
                 <td>
-                    <a href="update?sid=${i.id}">Update</a> | <a href="delete?sid=${i.id}"> Delete</a>    
+                    <a href="update?sid=${i.id}">Update</a> | 
+                    <a href="#" onclick="doDelete('${i.id}')"> Delete</a>    
                 </td>
             </tr>
             </c:forEach>
