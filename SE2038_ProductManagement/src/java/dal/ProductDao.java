@@ -33,21 +33,14 @@ public class ProductDao extends DBContext{
 
     public List<Product> searchProductsByName(String kw, String catIdKw){
         List<Product> productList = new ArrayList<>();
-//        String sql1 = "SELECT * FROM tbProduct\n" +
-//                     "WHERE name LIKE '%"+kw+"%'";
-//        String sql2 = "SELECT * FROM tbProduct\n" +
-//                     "WHERE name LIKE '%"+kw+"%' AND CatId='"+catIdKw+"'";
         String sql1 = "SELECT * FROM tbProduct\n" +
-                     "WHERE name LIKE ?";
+                     "WHERE name LIKE '%"+kw+"%'";
         String sql2 = "SELECT * FROM tbProduct\n" +
-                     "WHERE name LIKE ? AND CatId=?";
+                     "WHERE name LIKE '%"+kw+"%' AND CatId='"+catIdKw+"'";
+
         String sql = catIdKw.equals("all") ? sql1 : sql2;
         try {
             PreparedStatement ps = connection.prepareStatement(sql);
-            if(kw.isEmpty() || kw==null)
-                kw="''";
-            ps.setString(1, "%"+kw+"%");
-            ps.setString(2, catIdKw);            
             ResultSet rs = ps.executeQuery();
             while (rs.next()){
                 String id = rs.getString(1);
