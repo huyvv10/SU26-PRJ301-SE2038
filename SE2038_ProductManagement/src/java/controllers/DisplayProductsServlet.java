@@ -70,8 +70,17 @@ public class DisplayProductsServlet extends HttpServlet {
             ProductDao prdDAO = new ProductDao();
             List<Product> prdList = new ArrayList<>();
             prdList = prdDAO.getAllProducts();
+            int totalPages = prdList.size()%prdDAO.nProductsPerPage == 0 ? 
+                        prdList.size()/prdDAO.nProductsPerPage :
+                        prdList.size()/prdDAO.nProductsPerPage +1;
+            request.setAttribute("totalPages", totalPages);
+            
+            String strPage = request.getParameter("page");
+            int page = strPage==null ? 1 : Integer.parseInt(strPage);
+            
+            prdList = prdDAO.getProductsPaging(page);
             request.setAttribute("prdList", prdList);
-
+           
             request.getRequestDispatcher("productslist.jsp")
                     .forward(request, response);
 

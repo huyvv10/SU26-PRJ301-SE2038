@@ -8,11 +8,38 @@ import java.sql.ResultSet;
 import java.util.Date;
 
 public class ProductDao extends DBContext{
+    public int nProductsPerPage = 6;
     public List<Product> getAllProducts(){
         List<Product> productList = new ArrayList<>();
         String sql = "SELECT * FROM tbProduct";
         try {
             PreparedStatement ps = connection.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()){
+                String id = rs.getString(1);
+                String name = rs.getString(2);
+                int qty = rs.getInt(3);
+                double price = rs.getDouble(4);
+                Date impDate = rs.getDate(5);
+                String catId = rs.getString(6);
+                Product x = new Product(id, name, qty, price, impDate, catId);
+                productList.add(x);
+            }
+            return productList;
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return null;
+    }
+    public List<Product> getProductsPaging(int page){
+        List<Product> productList = new ArrayList<>();
+        String sql = "SELECT * FROM tbProduct\n" +
+                     "ORDER BY Id\n" +
+                     "OFFSET ? ROWS FETCH NEXT ? ROWS ONLY";
+        try {
+            PreparedStatement ps = connection.prepareStatement(sql);
+            ps.setInt(1, page*nProductsPerPage - nProductsPerPage);
+            ps.setInt(2, nProductsPerPage);
             ResultSet rs = ps.executeQuery();
             while (rs.next()){
                 String id = rs.getString(1);

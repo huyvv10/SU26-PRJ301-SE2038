@@ -35,6 +35,12 @@
             </tr>
         </table>
         <br>
+        <div style="text-align: center">        
+            <c:forEach begin="${1}" end="${totalPages}" var="i">    
+                <a href="displayproducts?page=${i}">${i}</a>
+            </c:forEach>
+        </div>
+        <br />
         <table border="1">
             <thead>
                 <tr>
