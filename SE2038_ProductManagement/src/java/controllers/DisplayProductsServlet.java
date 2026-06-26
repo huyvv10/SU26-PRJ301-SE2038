@@ -85,8 +85,8 @@ public class DisplayProductsServlet extends HttpServlet {
                     .forward(request, response);
 
         } catch (Exception e) {
+            System.out.println(e);
         }
-
     }
 
     /**
